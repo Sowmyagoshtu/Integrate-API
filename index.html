@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Registration Form -->
+        <div class="form-section">
+            <h2>Registration Form</h2>
+            <form id="registrationForm" action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="gender">Gender:</label>
+                <div id="gender">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
+                </div>
+                
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob">
+                
+                <label for="file">Upload File:</label>
+                <input type="file" id="file" name="file">
+                
+                <label for="attending">Attending:</label>
+                <select id="attending" name="attending" required>
+                    <option value="">Select</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="maybe">Maybe</option>
+                </select>
+                
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" rows="4"></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div id="alert" class="alert"></div>
+        <div class="users-section">
+            <h2>Users Data</h2>
+            <button id="fetchUsersButton">Fetch Users Data</button>
+            <div id="users"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
